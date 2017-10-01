@@ -1,0 +1,174 @@
+% -------------------------------------
+% -- Assignment 1: Cooling of Coffee --
+% -- Math 3090 ------------------------
+
+% Set document type
+\documentclass[11pt,oneside]{extarticle}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{thmtools}
+\usepackage{fontspec}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{inputenc}
+%\usepackage{unicode-math}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{garamondx}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{newtxmath}
+\usepackage{gensymb}
+\usepackage{solarized-light}
+\usepackage{xcolor}
+%\usepackage{lmodern}
+
+%\usepackage[default]{sourcecodepro}
+\usepackage[T1]{fontenc}
+%\usepackage{inconsolata}
+% Real number symbol
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\dprime}{{\prime\prime}}
+\newcommand{\Celsius}{\:\degree\mathrm{C}}
+\newcommand{\Dollar}{\$}
+\newcommand{\percent}{\%}
+%\newcommand{\min}{\mathrm{min}\:}
+
+% Set typewriter font to Source Code Pro
+%\renewcommand{\ttfamily}{\tiny\sourcecodepro}
+
+% Change enumerator to use letters i.e., a, b, c, ...
+\renewcommand{\theenumi}{\alph{enumi}}
+
+\setlength{\belowcaptionskip}{-12pt}
+%\setttfont{
+
+% Set paragraph indent to 0cm
+\setlength{\parindent}{0cm}
+%\setlength{\parskip}{1cm plus4mm minus3mm}
+\setlength{\parskip}{0.25cm}
+
+\begin{document}
+
+\section{Changing room temperature}
+
+\par Modify the coffee model to account for a room temperature that starts at $20\Celsius$,
+and increases at a constant rate to a maximum $26\Celsius$ in $2$ hours, and then
+stays at the maximum temperature. Assume that the initial temperature of the cofee
+is $100\Celsius$ and after $10$ minutes, the temperature of the coffee is $90\Celsius$.
+Modify the codes and draw the room temperature and coffee temperature in the same
+diagram for $6$ hours.
+
+\subsection{Building model}
+
+\par The independent variable of the model is time $t$ in hours. The observed temperature
+of the coffee $u_{obs}(t)$ is a function of time, with units$\Celsius$.
+
+\par Let $u_{sur}$ be the surruounding temperature, then $u_{sur}$ is given by
+
+\begin{equation}
+    u_{sur}(t) = 
+    \begin{cases} 
+        20 + 3t & 0 \leq t \leq 2 \\
+        26 & t > 2 \\
+    \end{cases}.
+\end{equation}
+
+\par We use the model presented in class, but modify it to use $u_{sur}(t)$ to
+get 
+
+\begin{equation}
+    \frac{du}{dt}
+    =
+    c(u_{sur}(t)-u)
+\end{equation}
+
+Now, we discretize the model to get
+
+\begin{equation}
+    \frac{u_{k+1} - u_k}{\Delta t}
+    =
+    c(u_{sur}(t_k) - u_k
+\end{equation}
+
+where $t_k = k\Delta t$ is the discrete time, at the $k^{th}$ step.
+
+\newpage
+
+\section{When to add milk?}
+
+\par Do you add the milk to coffee straight away? People often ask wheter it is better
+to add the cold milk to a hot cup of coffee straight away or wait for a while to
+let it cool down and then add the cold milk.
+
+\par Estimate the optimal time to add cold milk so that the coffee cools down to
+the drinkable temperature fastests. Let us assume that the drinable temperature
+is $50\Celsius$. Assume that the initial temperature of the coffee is $100\Celsius$
+and the insulation of the cup is $0.01282$. Room temperature is fixed at $22\Celsius$.
+Is your result reasonable? Explain it briefly. Based on your result, make suggestion
+to the people about when to add coffee.
+
+
+\par You can use and modify the model and codes we developed in the class for the
+cooling of the coffee in a constant room temperature. Assume that the temperature
+of the coffee is independent on special variables. Make further assumptions if needed.
+
+\newpage
+
+\section{Compound interest}
+
+You invest $\Dollar 100$ in a savings account paying $6\percent$ per year. Let
+$y(t)$ be the amount in your account after $t$ years. If the interest rate is
+compounded continuously, then $y(t)$ solves the ODE initial value problem
+
+$$
+\frac{dy}{dt} = ry
+$$
+
+where $r=6\percent=0.06$ and $y(0)=\Dollar 100$.
+
+\begin{enumerate}
+
+    \item What is the analytic solution $y(t)$ to this initial value problem?
+
+        Start with the ensatz $y(t)=Ae^{rt}$, and plug into equation above.
+
+        $$
+        \frac{dy}{dt}(t) =
+        rAe^{rt} = ry(t)
+        $$
+
+        Take ensatz at $t\rightarrow 0$, to determine constant $A$,
+        
+        $$
+        y(0)=Ae^{r\cdot 0} = A
+        \implies
+        A = y(0) = \Dollar 100.
+        $$
+
+        The analytic solution is therefore,
+
+        \begin{equation}
+            y(t)=100e^{rt}.
+            \label{eq:compound}
+        \end{equation}
+
+    \item What is the balance in your account after 10 years with each of the
+        following methods of compounding interest, yearly, monthly, quarterly,
+        daily, and continuous compounding?
+
+        \par {\bf Compound interest} can be solved analytically using 
+        \ref{eq:compound}, as follows:
+
+        $$
+        y(10) = 100 e^{0.06\cdot 10} = \Dollar182.21.
+        $$
+
+\end{enumerate}
+
+
+\end{document}
