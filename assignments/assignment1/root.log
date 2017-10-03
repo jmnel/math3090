@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Arch Linux) (preloaded format=xelatex 2017.9.9)  1 OCT 2017 19:45
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Arch Linux) (preloaded format=xelatex 2017.9.9)  2 OCT 2017 22:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -964,73 +964,82 @@ Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
 File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-LaTeX Font Info:    Try loading font information for T1+zgmx on input line 55.
+LaTeX Font Info:    Try loading font information for T1+zgmx on input line 59.
 
 (/home/jacques/texmf/tex/latex/garamondx/t1zgmx.fd
 File: t1zgmx.fd 2012/10/29 Fontinst v1.933 font definitions for T1/zgmx.
-) (./root.aux)
+) (./root.aux
+
+LaTeX Warning: Label `fig:analytic' multiply defined.
+
+
+LaTeX Warning: Label `fig:analytic' multiply defined.
+
+
+LaTeX Warning: Label `fig:analytic' multiply defined.
+
+)
 \openout1 = `root.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 55.
-LaTeX Font Info:    Try loading font information for OML+ntxmi on input line 55
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 59.
+LaTeX Font Info:    Try loading font information for OML+ntxmi on input line 59
 .
-
-(/usr/share/texmf-dist/tex/latex/newtx/omlntxmi.fd
+ (/usr/share/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 55.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 55.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 59.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 59.
 
 
 (/usr/share/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 55.
-LaTeX Font Info:    Try loading font information for LY1+ptm on input line 55.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 59.
+LaTeX Font Info:    Try loading font information for LY1+ptm on input line 59.
 
 (/usr/share/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 55.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 59.
 
 (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 55.
-LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 55
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 59.
+LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 59
 .
 
 (/usr/share/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 59.
 LaTeX Font Info:    Try loading font information for LMX+ntxexx on input line 5
-5.
+9.
 
 (/usr/share/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    ... okay on input line 59.
 .................................................
 . fontspec info: "setup-math"
 . 
@@ -1038,56 +1047,56 @@ LaTeX Font Info:    ... okay on input line 55.
 .................................................
 \symlegacymaths=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 55.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 55.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 55.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 55.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 55.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 55.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 55.
-LaTeX Font Info:    Redeclaring math accent \check on input line 55.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 55.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 55.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 55.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 55.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 55.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 59.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 59.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 59.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 59.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 59.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 59.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 59.
+LaTeX Font Info:    Redeclaring math accent \check on input line 59.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 59.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 59.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 59.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 59.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 59.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 55.
+(Font)              `operators' in the math version `normal' on input line 59.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/zgmx/m/n --> TU/zgmx/m/n on input line 55.
+(Font)                  OT1/zgmx/m/n --> TU/zgmx/m/n on input line 59.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 55.
+(Font)              `operators' in the math version `bold' on input line 59.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/zgmx/b/n --> TU/zgmx/m/n on input line 55.
+(Font)                  OT1/zgmx/b/n --> TU/zgmx/m/n on input line 59.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/zgmx/m/n --> TU/zgmx/m/n on input line 55.
+(Font)                  TU/zgmx/m/n --> TU/zgmx/m/n on input line 59.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/zgmx/m/it --> TU/zgmx/m/it on input line 55.
+(Font)                  OT1/zgmx/m/it --> TU/zgmx/m/it on input line 59.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/zgmx/b/n --> TU/zgmx/b/n on input line 55.
+(Font)                  OT1/zgmx/b/n --> TU/zgmx/b/n on input line 59.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  T1/lmss/m/n --> TU/lmss/m/n on input line 55.
+(Font)                  T1/lmss/m/n --> TU/lmss/m/n on input line 59.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  T1/lmtt/m/n --> TU/lmtt/m/n on input line 55.
+(Font)                  T1/lmtt/m/n --> TU/lmtt/m/n on input line 59.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/zgmx/m/n --> TU/zgmx/b/n on input line 55.
+(Font)                  TU/zgmx/m/n --> TU/zgmx/b/n on input line 59.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/zgmx/b/it --> TU/zgmx/b/it on input line 55.
+(Font)                  OT1/zgmx/b/it --> TU/zgmx/b/it on input line 59.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/b/n --> TU/lmss/b/n on input line 55.
+(Font)                  T1/lmss/b/n --> TU/lmss/b/n on input line 59.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/b/n --> TU/lmtt/b/n on input line 55.
+(Font)                  T1/lmtt/b/n --> TU/lmtt/b/n on input line 59.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1126,7 +1135,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 \c@mv@tabular=\count284
 \c@mv@boldtabular=\count285
 \AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring OFF on input line 55.
+Package hyperref Info: Link coloring OFF on input line 59.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1135,9 +1144,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count286
 )
-LaTeX Info: Redefining \ref on input line 55.
-LaTeX Info: Redefining \pageref on input line 55.
-LaTeX Info: Redefining \nameref on input line 55.
+LaTeX Info: Redefining \ref on input line 59.
+LaTeX Info: Redefining \pageref on input line 59.
+LaTeX Info: Redefining \nameref on input line 59.
  (./root.out)
 (./root.out)
 \@outlinefile=\write3
@@ -1146,79 +1155,121 @@ LaTeX Info: Redefining \nameref on input line 55.
 \c@lstlisting=\count287
 \symgns@font=\mathgroup11
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/zgmx/m/n --> TS1/zgmx/b/n on input line 55.
-Package gensymb Info: Math companion symbols declared on input line 55.
-LaTeX Info: Redefining \degree on input line 55.
-LaTeX Info: Redefining \celsius on input line 55.
+(Font)                  TS1/zgmx/m/n --> TS1/zgmx/b/n on input line 59.
+Package gensymb Info: Math companion symbols declared on input line 59.
+LaTeX Info: Redefining \degree on input line 59.
+LaTeX Info: Redefining \celsius on input line 59.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 55.
-LaTeX Info: Redefining \ohm on input line 55.
-Package gensymb Info: Using \textohm for \ohm on input line 55.
-Package gensymb Info: Using \textmu for \micro on input line 55.
+erthousand on input line 59.
+LaTeX Info: Redefining \ohm on input line 59.
+Package gensymb Info: Using \textohm for \ohm on input line 59.
+Package gensymb Info: Using \textmu for \micro on input line 59.
  (/usr/share/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 )
-LaTeX Font Info:    Try loading font information for TU+zgmx on input line 59.
-LaTeX Font Info:    No file TUzgmx.fd. on input line 59.
+LaTeX Font Info:    Try loading font information for TU+zgmx on input line 63.
+LaTeX Font Info:    No file TUzgmx.fd. on input line 63.
 
 
 LaTeX Font Warning: Font shape `TU/zgmx/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 59.
+(Font)              using `TU/lmr/m/n' instead on input line 63.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 59.
+LaTeX Font Info:    Try loading font information for U+msa on input line 63.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 59.
+LaTeX Font Info:    Try loading font information for U+msb on input line 63.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+ntxmia on input line 59.
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 63.
 
 
 (/usr/share/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2016/01/31 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 59.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 63.
 
 
 (/usr/share/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 59.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 63.
 
 
 (/usr/share/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
-LaTeX Font Info:    Try loading font information for TS1+zgmx on input line 59.
+LaTeX Font Info:    Try loading font information for TS1+zgmx on input line 63.
 
 
 (/home/jacques/texmf/tex/latex/garamondx/ts1zgmx.fd
 File: ts1zgmx.fd 2012/11/16 Fontinst v1.933 font definitions for TS1/zgmx.
-) [1
+)
+(/home/jacques/repos/math3090/assignments/assignment1/figures/figure1-1.tex
+\gptboxheight=\skip65
+\gptboxwidth=\skip66
+\gptboxtext=\box50
+File: /home/jacques/repos/math3090/assignments/assignment1/figures/figure1-1.ep
+s Graphic file (type eps)
+</home/jacques/repos/math3090/assignments/assignment1/figures/figure1-1.eps>
+)
 
-] [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 174.
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 114.
+
+[1
+
+] [2] [3]
+(/home/jacques/repos/math3090/assignments/assignment1/figures/figure2-1.tex
+File: /home/jacques/repos/math3090/assignments/assignment1/figures/figure2-1.ep
+s Graphic file (type eps)
+</home/jacques/repos/math3090/assignments/assignment1/figures/figure2-1.eps>
+)
+[4]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 266.
+
+ (/usr/share/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+(/home/jacques/repos/math3090/assignments/assignment1/figures/figure2-2.tex
+File: /home/jacques/repos/math3090/assignments/assignment1/figures/figure2-2.ep
+s Graphic file (type eps)
+</home/jacques/repos/math3090/assignments/assignment1/figures/figure2-2.eps>
+)
+(/home/jacques/repos/math3090/assignments/assignment1/figures/figure2-3.tex
+File: /home/jacques/repos/math3090/assignments/assignment1/figures/figure2-3.ep
+s Graphic file (type eps)
+</home/jacques/repos/math3090/assignments/assignment1/figures/figure2-3.eps>
+)
+[5] [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 393.
+ [7]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 393.
  (./root.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 174.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 174.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 393.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 393.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.5pt have occurred.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 23530 strings out of 492998
- 420181 string characters out of 6139962
- 525048 words of memory out of 5000000
- 27277 multiletter control sequences out of 15000+600000
- 579815 words of font info for 69 fonts, out of 8000000 for 9000
+ 23675 strings out of 492998
+ 423265 string characters out of 6139962
+ 529048 words of memory out of 5000000
+ 27373 multiletter control sequences out of 15000+600000
+ 607845 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 40i,7n,45p,10385b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,9n,45p,10385b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on root.pdf (3 pages).
+Output written on root.pdf (7 pages).

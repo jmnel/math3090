@@ -44,6 +44,10 @@
 % Change enumerator to use letters i.e., a, b, c, ...
 \renewcommand{\theenumi}{\alph{enumi}}
 
+\renewcommand{\eqref}[1]{\textup{\emph{({\ref*{#1}})}}}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
 \setlength{\belowcaptionskip}{-12pt}
 %\setttfont{
 
@@ -87,15 +91,32 @@ get
     c(u_{sur}(t)-u)
 \end{equation}
 
-Now, we discretize the model to get
+Now, we discretize the model with the timestep $h=\Delta t$ to get
 
 \begin{equation}
-    \frac{u_{k+1} - u_k}{\Delta t}
+    \frac{u_{k+1} - u_k}{h}
     =
-    c(u_{sur}(t_k) - u_k
+    hc(u_{sur}(t_k) - u_k)
 \end{equation}
 
-where $t_k = k\Delta t$ is the discrete time, at the $k^{th}$ step.
+where $t_k = k\Delta t$ is the discrete time, at the $k^{th}$ step. This is the
+Newton Forward method.
+
+\subsection{Result}
+
+\begin{figure}[H]
+    \caption{Coffee in room with changing temperature}
+    \label{fig:analytic}
+    \begin{center}
+        {\graphicspath{{./figures/}}
+        \input{/home/jacques/repos/math3090/assignments/assignment1/figures/figure1-1}} 
+        
+        \scriptsize{ {\bf Description:} The analytic solution $U(t)$ plotted for $\rho = 0.1$,
+        $u_{m} = 6\Celsius$, and $t^* = 50$ minutes. The disconuity is clearly visible when
+        the milk is added to the coffee. The horizontal line shows $u_d$. The intersection
+        of the lines is when $U(t)=u_d$.}
+    \end{center}
+\end{figure}
 
 \newpage
 
@@ -117,8 +138,206 @@ to the people about when to add coffee.
 cooling of the coffee in a constant room temperature. Assume that the temperature
 of the coffee is independent on special variables. Make further assumptions if needed.
 
+\subsection{Preliminary discussion and assumptions}
+
+\par A realistic physical treatment of the problem of mixing disimilar fluids at
+different temperatures is an enormously complicated problem. Simulating such a
+scenario requires both accurate $3D$ spacial fluid simulation coupled with a 
+thermal dynamic simulation.
+
+\par Instead of dealing with the complexity of mixing fluids we will confine
+ourselves to some simplifications. All physical properties of the liquids
+(asside from temperature) are taken to be identical. Mixing the milk into the
+coffee causes an instantaneous change temperature. The only factors we consider
+are the temperature of the milk $u_{milk}^{(i)}$ before mixing, and the ratio of the mass
+of the milk divided by the mass of the coffee $\rho$ given by
+
+\subsection{Model}
+
+\begin{equation}
+    \frac{dU}{dt} = c( u_{sur} - U) \quad\text{for}\quad t \neq t^*.
+\end{equation}
+
+\begin{equation}
+    \label{eq:model2}
+    U(t) = 
+    \begin{cases} 
+        u(t)                &   t < t^* \\
+        u_{mix}             & t = t^* \\
+        v(t)                &   t > t^* \\
+    \end{cases}.
+\end{equation}
+
+\begin{equation}
+    \frac{du}{dt} = c(u_{sur} - u)\quad\text{for}\quad t < t^*,
+    \quad\text{with}\quad
+    u(0) = U(0) = u_0 
+\end{equation}
+
+\begin{equation}
+    \frac{dv}{dt} = c(u_{sur} - v)\quad\text{for}\quad t > t^*
+    \quad\text{with}\quad
+    v(t^*) = v_0 = u_{mix}
+\end{equation}
+
+\begin{equation}
+    \label{eq:mix}
+    T = \frac{m_1T_1 + m_2T_2}{m_1+m_2}
+    =
+    \frac{m_1(T_1 + \rho T_2)}{m_1(1+\rho)}
+    =
+    \frac{ T_1 + \rho T_2 }{ 1 + \rho },
+    \quad\text{where}\quad
+    \rho = \frac{m_2}{m_1}
+\end{equation}
+
+Taking \eqref{eq:mix}, with $T_1 = u(t^*)$, and the milk temperature $u_m$ we can get $u_{mix}$,
+
+\begin{equation}
+    u_{mix} = 
+    v_0 = v(t^*) =
+    \frac{ u(t^*) + \rho u_m }{ 1 + \rho }
+\end{equation}
+
+\subsection{Analytical model}
+
+We can easily find a closed form solution for $U(t)$ by solving the constrained
+differential equation \eqref{eq:model2}.
+
+\begin{equation}
+    \alpha(t) = \alpha_0 e^{-ct}
+    \quad\text{and}\quad
+    \beta(t) = \beta_0 e^{-c(t - t^*)}
+\end{equation}
+
+where $\alpha(t) = u(t) - u_{sur}$ and $\beta(t) = v(t) - u_{sur}$, with intial
+conditions $\alpha_0 = \alpha(0) = u_0 - u_{sur}$ and $\beta_0 = \beta(t^*) =
+v_0 - u_{sur}$. The closed form solution is then
+
+\begin{equation}
+    \label{eq:model2-analytic}
+    U(t) =
+    \begin{cases}
+        \alpha_0e^{-ct} + u_{sur}   &   t < t^* \\
+        \beta_0e^{-c(t-t^*)} + u_{sur}  & t \geq t^* \\
+    \end{cases}
+\end{equation}
+
+
+\begin{figure}[H]
+    \caption{Analytical solution}
+    \label{fig:analytic}
+    \begin{center}
+        {\graphicspath{{./figures/}}
+        \input{/home/jacques/repos/math3090/assignments/assignment1/figures/figure2-1}} 
+        
+        \scriptsize{ {\bf Description:} The analytic solution $U(t)$ plotted for $\rho = 0.1$,
+        $u_{m} = 6\Celsius$, and $t^* = 50$ minutes. The disconuity is clearly visible when
+        the milk is added to the coffee. The horizontal line shows $u_d$. The intersection
+        of the lines is when $U(t)=u_d$.}
+    \end{center}
+\end{figure}
+
 \newpage
 
+\subsection{Discrete Newton Forward model}
+
+\par It is straightforward to create a discrete model. Let $h=\Delta t$ denote
+the iteration step size, and let $k\in\left\lbrace0,1,\ldots\right\rbrace$ denote 
+the iteration step. The initial step is to set
+
+$$
+U_0 = u_0.
+$$
+
+\begin{equation}
+    U_{k} = 
+    \begin{cases}
+        U_{k-1} - hc( U_{k-1} - u_{sur} ) & \text{for } hk < t^* \\
+        \frac{U_{k-1} + \rho u_m}{1+\rho} & \text{for } hk \leq t^* \leq h(k+1) \\
+        U_{k-1} - hc( U_{k-1} - u_{sur} ) & \text{for } hk > t^* \\
+\end{cases},
+\end{equation}
+
+In practice an additional point is added at $t^*$ to better 
+plot the disconuity with a vertical line. This restricts the implementation to values
+of $t^*$ which satisfy $\mathtt{fmod}(t^*, h) = 0$. $\mathtt{fmod}$ is the
+floating point modulus function in the \emph{C++ standard library} as defined in
+the {\ttfamily<cmath>} header.
+
+\begin{figure}[H]
+    \caption{Discrete solution with varying $t^*$}
+    \label{fig:analytic}
+    \begin{center}
+        {\graphicspath{{./figures/}}
+        \input{/home/jacques/repos/math3090/assignments/assignment1/figures/figure2-2}} 
+        
+        \scriptsize{ {\bf Discussion} The analytic solution $U(t)$ plotted for $\rho = 0.1$,
+        $u_{m} = 6\Celsius$, and $t^* = 50$ minutes. The disconuity is clearly visible when
+        the milk is added to the coffee. The horizontal line shows $u_d$. The intersection
+        of the lines is when $U(t)=u_d$.}
+    \end{center}
+\end{figure}
+
+% Figure 2.4 - Comparing analytical and discrete model
+\begin{figure}[H]
+    \caption{Comparing analytical model with discrete model for various time steps $h$}
+    \label{fig:analytic}
+    \begin{center}
+        {\graphicspath{{./figures/}}
+        \input{/home/jacques/repos/math3090/assignments/assignment1/figures/figure2-3}} 
+        
+        \scriptsize{ {\bf Discussion} Observe that the discrete model approaches
+        the analytical solution as the time step $h$ decreases. The discretization
+        step introduces a negative error into the solution. This example uses
+        the following parameters values: $u_0 = 100.0\Celsius$, $u_{sur} = 22.0\Celsius$,
+        $t^*=40$ mins., $\rho=0.1$, and $u_m=6.0\Celsius$.
+    }
+    \end{center}
+\end{figure}
+
+\subsection{Conclusions and analysis}
+
+\par Observe that the magnitude of the first derivative of $U(t)$ decreases as 
+$t\rightarrow\infty$. In order for $U(t)$ to reach $u_d$ in the minimum
+amount of time, it is best to add the milk as late as possible. This maximizes
+rate of the first portion of Newton cooling. Infact, the model intersects $y=u_d$,
+slightly earlier as $t^*$ increases. Keep in mind that there is a limit to this.
+
+There exists some $t_{ideal} > 0$ such that if $t^* > t_{ideal}$, adding milk to
+the coffee instantly cools it below $U(t) < u_d$.
+
+\par We can derive the optimum time $t_{ideal}$ by starting from
+
+\begin{equation}
+    u_{mix} = \frac{u(t^*) + \rho u_m }{1+\rho} = u_d = 50.0\Celsius.
+\end{equation}
+
+$$
+u(t^*) = u_d(1+\rho) - \rho u_m
+$$
+
+$$
+(u_0 - u_{sur})e^{-ct^*} + u_{sur} = u_d(1+\rho)-\rho u_m
+$$
+
+$$
+-ct^* = \ln\left\lbrack \frac{u_d(1-\rho) - \rho u_m}{u_0 - u_{sur}}\right\rbrack
+$$
+
+\begin{equation}
+    t_{ideal} = t^* = -\frac{1}{c}
+    \ln\left\lbrack \frac{u_d(1-\rho) - \rho u_m}{u_0 - u_{sur}}\right\rbrack
+\end{equation}
+
+Here, $t_{ideal}$ is the latest we can add milk without cooling the coffee below
+$u_d$. This minimizes the cooling time.
+
+\newpage
+
+% -------------------------------------
+% -- Question 3 -----------------------
+% -------------------------------------
 \section{Compound interest}
 
 You invest $\Dollar 100$ in a savings account paying $6\percent$ per year. Let
@@ -161,13 +380,19 @@ where $r=6\percent=0.06$ and $y(0)=\Dollar 100$.
         following methods of compounding interest, yearly, monthly, quarterly,
         daily, and continuous compounding?
 
-        \par {\bf Compound interest} can be solved analytically using 
-        \ref{eq:compound}, as follows:
+        \par {\bf Continouos compounding} can be solved analytically using 
+        \eqref{eq:compound}, as follows:
 
         $$
         y(10) = 100 e^{0.06\cdot 10} = \Dollar182.21.
         $$
 
+        \par {\bf Yearly} 
+        
+        \par {\bf Monthly} 
+        \par {\bf Quarterly} 
+        \par {\bf Daily} 
+       
 \end{enumerate}
 
 
